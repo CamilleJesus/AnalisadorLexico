@@ -1,0 +1,32 @@
+/*
+Autores: Camille Jesús e Reinildo
+Componente Curricular: EXA869 - MI Processadores de Linguagem de Programação (P03)
+Data: 31/03/2019
+//Comentário de bloco sem fechar.
+
+
+//Exemplo de teste do Analisador Léxico.
+
+principal () {
+
+    constantes {
+        real pi = 3.14;
+        real e = 2.718;
+        texto string = "Hello World";
+    }
+
+    variaveis {
+        int b = 2, c = 7;
+    }
+
+    enquanto (b <= c) {
+
+        se (b == c) entao {
+            escreva ("O valor da variavel b eh igual a 7.");
+        } senao {
+            escreva (string);
+        }
+        b++;
+    }
+
+}
