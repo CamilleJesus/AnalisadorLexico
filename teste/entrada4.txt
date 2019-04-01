@@ -22,7 +22,7 @@ principal () {
     enquanto (b <= c) {
 
         se (b == c) entao {
-            escreva ("O valor da variavel b eh igual a 7.");
+            escreva ("O valor da variavel b eh igual a 7.);   //Cadeia de caracteres sem fechar.
         } senao {
             escreva (string);
         }

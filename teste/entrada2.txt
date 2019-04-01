@@ -11,7 +11,7 @@ principal () {
 
     constantes {
         real pi = 3.14;
-        real e = 2.718;
+        real e = 2.718a;   //Construção inválida de lexema.
         texto string = "Hello World";
     }
 
@@ -21,7 +21,7 @@ principal () {
 
     enquanto (b <= c) {
 
-        se (b == c) entao {
+        se (b == ç) entao {   //Caractere não pertence ao alfabeto.
             escreva ("O valor da variavel b eh igual a 7.");
         } senao {
             escreva (string);

@@ -2,7 +2,7 @@
 Autores: Camille Jesús e Reinildo
 Componente Curricular: EXA869 - MI Processadores de Linguagem de Programação (P03)
 Data: 31/03/2019
-*/
+//Comentário de bloco sem fechar.
 
 
 //Exemplo de teste do Analisador Léxico.
