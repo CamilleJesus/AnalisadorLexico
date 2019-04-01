@@ -1,0 +1,15 @@
+/*
+Autores: Camille Jesús e Reinildo Souza
+Componente Curricular: EXA869 - MI Processadores de Linguagem de Programação (P03)
+Data: 01/04/2019
+*/
+
+
+//Exemplo de teste do Analisador Léxico.
+
+principal() {
+	inteiro j;
+	escreva("Digite um valor inteiro e ENTER");
+	leia("%d", &j);
+	escreva("Valor de j e' %d", j);
+}
