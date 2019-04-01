@@ -1,0 +1,12 @@
+package token;
+
+public enum ClassesToken {
+    PALAVRA_RESERVADA,
+    IDENTIFICADOR,
+    NUMERO,
+    OPERADOR_ARITMETICO,
+    OPERADOR_RELACIONAL,
+    OPERADOR_LOGICO,
+    DELIMITADOR,
+    CADEIA_CARACTERES
+}
