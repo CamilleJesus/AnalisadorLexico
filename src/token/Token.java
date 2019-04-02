@@ -1,24 +1,35 @@
 package token;
 
 public class Token {
+
     private ClassesToken classe;
+    private String lexema;
     private long linha;
 
-    public Token (ClassesToken classe, long linha) {
+    public Token (ClassesToken classe, String lexema, long linha) {
         this.classe = classe;
+        this.lexema = lexema;
         this.linha = linha;
     }
 
     public ClassesToken getClasse() {
-        return classe;
+        return this.classe;
     }
 
     public void setClasse(ClassesToken classe) {
         this.classe = classe;
     }
 
+    public String getLexema() {
+        return this.lexema;
+    }
+
+    public void setLexema(String lexema) {
+        this.lexema = lexema;
+    }
+
     public long getLinha() {
-        return linha;
+        return this.linha;
     }
 
     public void setLinha(long linha) {
@@ -27,6 +38,6 @@ public class Token {
 
     @Override
     public String toString() {
-        return (String.format("<%s, %d>", this.classe, this.linha));
+        return (String.format("<%s, %s, %d>", this.classe, this.lexema, this.linha));
     }
 }
