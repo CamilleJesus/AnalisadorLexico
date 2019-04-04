@@ -2,21 +2,20 @@ package token;
 
 public class Token {
 
-    private ClassesToken classe;
-    private String lexema;
+    private String classe, lexema;
     private long linha;
 
-    public Token (ClassesToken classe, String lexema, long linha) {
+    public Token (String classe, String lexema, long linha) {
         this.classe = classe;
         this.lexema = lexema;
         this.linha = linha;
     }
 
-    public ClassesToken getClasse() {
+    public String getClasse() {
         return this.classe;
     }
 
-    public void setClasse(ClassesToken classe) {
+    public void setClasse(String classe) {
         this.classe = classe;
     }
 
