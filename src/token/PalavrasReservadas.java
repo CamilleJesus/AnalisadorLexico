@@ -11,7 +11,7 @@ public class PalavrasReservadas {
         put("variaveis", "PALAVRA_RESERVADA");
         put("metodo", "PALAVRA_RESERVADA");
         put("resultado", "PALAVRA_RESERVADA");
-        put("prinipal", "PALAVRA_RESERVADA");
+        put("principal", "PALAVRA_RESERVADA");
         put("se", "PALAVRA_RESERVADA");
         put("entao", "PALAVRA_RESERVADA");
         put("senao", "PALAVRA_RESERVADA");
