@@ -1,0 +1,22 @@
+programa Teste;
+// Programa sem sentido com exceção da string na linha 7 : )
+
+metodo principal ()
+{
+	inteiro a?;
+	texto nome = "galo vice";
+	a = %;
+	a = 2.&;
+	a = 7.x;
+	a = 5.7.8;
+
+	se (a >> 10) entao
+	{
+		x = ;
+	}
+	se (a =! b &&& a | x ? b)
+	{
+		a := _ \ ^;
+	}
+	/* Este eh um comentario
+}
