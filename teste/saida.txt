@@ -19,7 +19,6 @@
 <OPERADOR_RELACIONAL, =, 15>
 <CADEIA_CARACTERES, "Hello World", 15>
 <DELIMITADOR, ;, 15>
-<DELIMITADOR, }, 16>
 <PALAVRA_RESERVADA, variaveis, 18>
 <DELIMITADOR, {, 18>
 <IDENTIFICADOR, int, 19>
@@ -66,3 +65,5 @@
 <DELIMITADOR, ;, 29>
 <DELIMITADOR, }, 30>
 <DELIMITADOR, }, 32>
+
+Erro léxico na linha 16: Número mal formado.

@@ -13,7 +13,6 @@ principal () {
         real pi = 3.14;
         real e = 2.718;
         texto frase = "Hello World";
-    }
 
     variaveis {
         int b = -2, c = - 7;
