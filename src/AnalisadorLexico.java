@@ -104,7 +104,7 @@ public class AnalisadorLexico {
             classe = classificaLexema(auxLexema);
 
             if (classe.equals("VALOR_INESPERADO")) {
-                erros.add(mensagemErro(auxLinhas.get(i), "valor inesperado."));
+                erros.add(mensagemErro(auxLinhas.get(i), "Número mal formado." ));
             } else if (classe.equals("CARACTERE_INVALIDO")) {
                 erros.add(mensagemErro(auxLinhas.get(i), "caractere inválido."));
             } else {
