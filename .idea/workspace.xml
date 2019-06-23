@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AnalisadorLexico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4335">
-              <caret line="255" column="1" selection-start-line="255" selection-start-column="1" selection-end-line="255" selection-end-column="1" />
+            <state relative-caret-position="1926">
+              <caret line="255" column="2" selection-start-line="255" selection-start-column="2" selection-end-line="255" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,8 +74,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -94,10 +92,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="token" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="AnalisadorLexico" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AnalisadorLexico" type="462c0819:PsiDirectoryNode" />
+              <item name="teste" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,14 +202,20 @@
       <option name="project" value="LOCAL" />
       <updated>1554953216035</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Começando a identificação de erros.">
+      <created>1555123964477</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1555123964477</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28441754" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28895614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -239,7 +250,8 @@
     <MESSAGE value="Classificação dos Lexemas Via Teclado" />
     <MESSAGE value="Gerando alguns tokens." />
     <MESSAGE value="Arquivo sem erros classificado com sucesso." />
-    <option name="LAST_COMMIT_MESSAGE" value="Arquivo sem erros classificado com sucesso." />
+    <MESSAGE value="Começando a identificação de erros." />
+    <option name="LAST_COMMIT_MESSAGE" value="Começando a identificação de erros." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
@@ -334,8 +346,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AnalisadorLexico.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4335">
-          <caret line="255" column="1" selection-start-line="255" selection-start-column="1" selection-end-line="255" selection-end-column="1" />
+        <state relative-caret-position="1926">
+          <caret line="255" column="2" selection-start-line="255" selection-start-column="2" selection-end-line="255" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

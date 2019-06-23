@@ -253,4 +253,4 @@ public class AnalisadorLexico {
         buffWrite.close();
         System.out.println("\nResultado da análise léxica do arquivo \"" + nomeArquivo + "\" no arquivo: saida.txt.");
     }
-}
+}a
