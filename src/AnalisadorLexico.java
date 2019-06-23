@@ -1,4 +1,3 @@
-import jdk.swing.interop.SwingInterOpUtils;
 import token.*;
 
 import java.io.*;
@@ -52,28 +51,41 @@ public class AnalisadorLexico {
         while ((linha = buffer.readLine()) != null) {
             numeroLinha++;
 
-            if (linha.contains("/*")) {
-                linha = linha.replaceAll("/\\*.*", "");
-                comentarioBloco = true;
+            if ((linha.contains("/*")) && (linha.contains("*/"))) {
+                linha = linha.replaceAll("/\\*.*\\*/", "");
+                comentarioBloco = false;
                 separaLinha(linha, numeroLinha);
                 linhaComentarioBloco = numeroLinha;
-            }
-
-            if (comentarioBloco == false) {
 
                 if (linha.contains("//")) {
                     linha = linha.replaceAll("//.*", "");
                 }
+                separaLinha(linha, numeroLinha);
             } else {
 
-                if (linha.contains("*/")) {
-                    linha = linha.replaceAll(".*\\*/", "");
-                    comentarioBloco = false;
-                } else {
-                    linha = linha.replaceAll(".*", "");
+                if (linha.contains("/*")) {
+                    linha = linha.replaceAll("/\\*.*", "");
+                    comentarioBloco = true;
+                    separaLinha(linha, numeroLinha);
+                    linhaComentarioBloco = numeroLinha;
                 }
+
+                if (comentarioBloco == false) {
+
+                    if (linha.contains("//")) {
+                        linha = linha.replaceAll("//.*", "");
+                    }
+                } else {
+
+                    if (linha.contains("*/")) {
+                        linha = linha.replaceAll(".*\\*/", "");
+                        comentarioBloco = false;
+                    } else {
+                        linha = linha.replaceAll(".*", "");
+                    }
+                }
+                separaLinha(linha, numeroLinha);
             }
-            separaLinha(linha, numeroLinha);
         }
         buffer.close();
 
@@ -96,7 +108,7 @@ public class AnalisadorLexico {
 
     public static void identificaLexema() {
         StringBuilder lexema = new StringBuilder();
-        String auxLexema, classe = "", classeAnterior = "", erro;
+        String auxLexema, classe = "", classeAnterior = "";
         int linhaCadeiaCaracteres = 0, cadeiaCaracteres = 0;
 
         for (int i = 0; i < auxLexemas.size(); i++) {
@@ -253,4 +265,4 @@ public class AnalisadorLexico {
         buffWrite.close();
         System.out.println("\nResultado da análise léxica do arquivo \"" + nomeArquivo + "\" no arquivo: saida.txt.");
     }
-}a
+}
