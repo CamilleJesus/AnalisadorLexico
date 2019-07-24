@@ -12,7 +12,7 @@ metodo principal ()
 	por linha";
 	a = %;
 	a = 2.&;
-	a = 7.x;
+	a = 7.x;5
 	a = 5.7.8;
 
 	se (a >> 10) entao

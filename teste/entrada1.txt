@@ -13,6 +13,11 @@ principal () {
         real pi = 3.14;
         real e = 2.718;
         texto frase = "Hello World";
+
+        // comentário de linha
+
+        /* comentário de bloco */
+
     }
 
     variaveis {

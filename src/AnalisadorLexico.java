@@ -1,5 +1,10 @@
-import token.*;
+/*
+Autores: Camille Jesús e Reinildo Souza
+Componente Curricular: EXA869 - MI Processadores de Linguagem de Programação (P03)
+Data: 31/03/2019
+*/
 
+import token.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -33,6 +38,7 @@ public class AnalisadorLexico {
         }
     }
 
+    // FAZ A LEITURA DO ARQUIVO .TXT DE ENTRADA E REMOVE OS COMENTÁRIOS
     public static void lerArquivo() throws IOException {
         String linha;
         boolean comentarioBloco = false;
@@ -89,11 +95,14 @@ public class AnalisadorLexico {
         }
         buffer.close();
 
+        // SINALIZA O ERRO DE COMENTÁRIO DE BLOCO NÃO FECHADO
         if (comentarioBloco == true) {
             erros.add(mensagemErro(linhaComentarioBloco, "comentário de bloco aberto."));
         }
     }
 
+
+    // QUEBRA O ARQUIVO DE ENTRADA EM VÁRIAS LINHAS
     public static void separaLinha(String linha, int numeroLinha) {
         String partes[] = linha.split("\\s+");
 
@@ -106,6 +115,7 @@ public class AnalisadorLexico {
         }
     }
 
+    // ANALISA CADA LEXEMA (O ATUAL E O ANTERIOR) ANTES DE CLASSIFICÁ-LO
     public static void identificaLexema() {
         StringBuilder lexema = new StringBuilder();
         String auxLexema, classe = "", classeAnterior = "";
@@ -116,7 +126,7 @@ public class AnalisadorLexico {
             classe = classificaLexema(auxLexema);
 
             if (classe.equals("VALOR_INESPERADO")) {
-                erros.add(mensagemErro(auxLinhas.get(i), "Número mal formado." ));
+                erros.add(mensagemErro(auxLinhas.get(i), "valor inesperado." ));
             } else if (classe.equals("CARACTERE_INVALIDO")) {
                 erros.add(mensagemErro(auxLinhas.get(i), "caractere inválido."));
             } else {
@@ -131,9 +141,9 @@ public class AnalisadorLexico {
                         classe = classificaLexema(lexema.toString());
 
                         if (classe.equals("VALOR_INESPERADO")) {
-                            erros.add(mensagemErro(auxLinhas.get(i), "valor inesperado."));
+                            erros.add(mensagemErro(auxLinhas.get(i), "número mal formado")); //valor inesperado.
                         } else if (classe.equals("CARACTERE_INVALIDO")) {
-                            erros.add(mensagemErro(auxLinhas.get(i), "caractere inválido."));
+                            erros.add(mensagemErro(auxLinhas.get(i), "caractere inválido")); //caractere não pertence ao alfabeto.
                         } else {
 
                             if ((classe.equals("CADEIA_CARACTERES_INCOMPLETA")) && (cadeiaCaracteres == 0)) {
@@ -173,6 +183,8 @@ public class AnalisadorLexico {
         }
     }
 
+
+    // NOMEIA O TOKEN DE ACORDO COM SUA CATEGORIA
     public static String classificaLexema(String lexema) {
 
         if (lexema.matches("[a-zA-Z]+\\w*")) {
@@ -205,9 +217,11 @@ public class AnalisadorLexico {
         return "CLASSE_INVALIDA";
     }
 
+    // ADICIONA A MENSAGAGEM DE ERRO NO ARQUIVO DE SAÍDA
     public static String mensagemErro (long linhaErro, String erro) {
         return ("Erro léxico na linha " + linhaErro+ ": " + erro);
     }
+
 
     public static void checaTokens() {
 
@@ -237,7 +251,7 @@ public class AnalisadorLexico {
             Token token = tokens.get(i);
 
             if (token.getClasse().equals("NUMERO_INCOMPLETO")) {
-                erros.add(mensagemErro(token.getLinha(), "valor inesperado."));
+                erros.add(mensagemErro(token.getLinha(), "número mal formado")); //valor inesperado.
                 tokens.remove(i);
             }
 
@@ -247,6 +261,7 @@ public class AnalisadorLexico {
         }
     }
 
+    // GERA O ARQUIVO DE SAÍDA COM OS DEVIDOS TOKENS E POSSÍVELS ERROS LÉXICOS
     public static void escreveArquivo() throws IOException {
         BufferedWriter buffWrite = new BufferedWriter(new FileWriter("teste/saida.txt"));
 

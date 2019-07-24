@@ -10,6 +10,6 @@ Data: 01/04/2019
 principal() {
 	inteiro j;
 	escreva("Digite um valor inteiro e ENTER");
-	leia("%d", &j);
+	leia("%d", j);
 	escreva("Valor de j e' %d", j);
 }

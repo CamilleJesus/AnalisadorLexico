@@ -18,5 +18,5 @@ metodo principal ()
 	{
 		a := _ \ ^;
 	}
-	/* Este eh um comentario
+	/* Este eh um comentario de bloco sem fechar
 }
