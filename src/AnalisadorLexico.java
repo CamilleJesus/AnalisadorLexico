@@ -16,42 +16,44 @@ public class AnalisadorLexico {
     private static ArrayList<Integer> auxLinhas = new ArrayList<>();
     private static ArrayList<Token> tokens = new ArrayList<>();
     private static ArrayList<String> erros = new ArrayList<>();
-    private static String nomeArquivo;
 
     public static void main(String[] args) {
         System.out.println("\n -- ANALISADOR LÉXICO -- ");
+        lerArquivos();
+    }
 
-        try {
-            lerArquivo();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println("\nIniciando a análise léxica do arquivo de entrada: " + nomeArquivo + ".");
-        identificaLexema();
-        checaTokens();
-        System.out.println("\nFinalizando a análise léxica do arquivo de entrada: " + nomeArquivo + ".");
+    public static void lerArquivos() {
+        File arquivos[], diretorio = new File("teste/");
+        arquivos = diretorio.listFiles();
+        int numeroArquivo = 0;
 
-        try {
-            escreveArquivo();
-        } catch (IOException e) {
-            e.printStackTrace();
+        for (int i = 0; i < arquivos.length; i++){
+
+            if (arquivos[i].toString().contains("entrada")) {
+
+                try {
+                    numeroArquivo = i + 1;
+                    System.out.println("\nIniciando a análise léxica do " + numeroArquivo + "º arquivo de entrada.");
+                    lerArquivo(arquivos[i]);
+                    identificaLexema();
+                    checaTokens();
+                    escreveArquivo((i + 1));
+                    limpaEstruturas();
+                    System.out.println("\nFinalizando a análise léxica do " + numeroArquivo + "º arquivo de entrada.");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
     // FAZ A LEITURA DO ARQUIVO .TXT DE ENTRADA E REMOVE OS COMENTÁRIOS
-    public static void lerArquivo() throws IOException {
+    public static void lerArquivo(File nomeArquivo) throws IOException {
         String linha;
         boolean comentarioBloco = false;
         Scanner in = new Scanner(System.in);
-        File arquivo;
         int numeroLinha = 0, linhaComentarioBloco = 0;
-
-        do {
-            System.out.print("Digite o nome do arquivo que deseja analisar (com a extensão): ");
-            nomeArquivo = in.nextLine();
-            arquivo = new File("teste/" + nomeArquivo);
-        } while (!arquivo.exists());
-        BufferedReader buffer = new BufferedReader(new FileReader(arquivo));
+        BufferedReader buffer = new BufferedReader(new FileReader(nomeArquivo));
 
         //Lê todas as linhas do arquivo até o final:
         while ((linha = buffer.readLine()) != null) {
@@ -262,8 +264,8 @@ public class AnalisadorLexico {
     }
 
     // GERA O ARQUIVO DE SAÍDA COM OS DEVIDOS TOKENS E POSSÍVELS ERROS LÉXICOS
-    public static void escreveArquivo() throws IOException {
-        BufferedWriter buffWrite = new BufferedWriter(new FileWriter("teste/saida.txt"));
+    public static void escreveArquivo(int numeroArquivo) throws IOException {
+        BufferedWriter buffWrite = new BufferedWriter(new FileWriter("teste/saida" + numeroArquivo + ".txt"));
 
         for (int i = 0; i < tokens.size(); i++) {
             buffWrite.append(tokens.get(i).toString() + "\n");
@@ -278,6 +280,13 @@ public class AnalisadorLexico {
             }
         }
         buffWrite.close();
-        System.out.println("\nResultado da análise léxica do arquivo \"" + nomeArquivo + "\" no arquivo: saida.txt.");
+        System.out.println("\nResultado da análise léxica no arquivo: saida" + numeroArquivo + ".txt");
+    }
+
+    public static void limpaEstruturas() {
+        auxLexemas.clear();
+        auxLinhas.clear();
+        tokens.clear();
+        erros.clear();
     }
 }

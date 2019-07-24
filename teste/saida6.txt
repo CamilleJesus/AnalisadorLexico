@@ -1,0 +1,72 @@
+<PALAVRA_RESERVADA, programa, 1>
+<IDENTIFICADOR, Teste, 1>
+<DELIMITADOR, ;, 1>
+<PALAVRA_RESERVADA, metodo, 4>
+<PALAVRA_RESERVADA, principal, 4>
+<DELIMITADOR, (, 4>
+<DELIMITADOR, ), 4>
+<DELIMITADOR, {, 5>
+<PALAVRA_RESERVADA, inteiro, 6>
+<IDENTIFICADOR, a?, 6>
+<DELIMITADOR, ;, 6>
+<PALAVRA_RESERVADA, texto, 7>
+<IDENTIFICADOR, nome, 7>
+<OPERADOR_RELACIONAL, =, 7>
+<CADEIA_CARACTERES, "galo vice", 7>
+<DELIMITADOR, ;, 7>
+<IDENTIFICADOR, a, 8>
+<OPERADOR_RELACIONAL, =, 8>
+<IDENTIFICADOR, a, 9>
+<OPERADOR_RELACIONAL, =, 9>
+<DELIMITADOR, ;, 9>
+<IDENTIFICADOR, a, 10>
+<OPERADOR_RELACIONAL, =, 10>
+<DELIMITADOR, ;, 10>
+<IDENTIFICADOR, a, 11>
+<OPERADOR_RELACIONAL, =, 11>
+<NUMERO, 5.7, 11>
+<DELIMITADOR, ., 11>
+<NUMERO, 8, 11>
+<DELIMITADOR, ;, 11>
+<PALAVRA_RESERVADA, se, 13>
+<DELIMITADOR, (, 13>
+<IDENTIFICADOR, a, 13>
+<OPERADOR_RELACIONAL, >, 13>
+<OPERADOR_RELACIONAL, >, 13>
+<NUMERO, 10, 13>
+<DELIMITADOR, ), 13>
+<PALAVRA_RESERVADA, entao, 13>
+<DELIMITADOR, {, 14>
+<IDENTIFICADOR, x, 15>
+<OPERADOR_RELACIONAL, =, 15>
+<DELIMITADOR, ;, 15>
+<DELIMITADOR, }, 16>
+<PALAVRA_RESERVADA, se, 17>
+<DELIMITADOR, (, 17>
+<IDENTIFICADOR, a, 17>
+<OPERADOR_RELACIONAL, =, 17>
+<OPERADOR_LOGICO, !, 17>
+<IDENTIFICADOR, b, 17>
+<IDENTIFICADOR, a, 17>
+<DELIMITADOR, |, 17>
+<IDENTIFICADOR, x, 17>
+<IDENTIFICADOR, b, 17>
+<DELIMITADOR, ), 17>
+<DELIMITADOR, {, 18>
+<IDENTIFICADOR, a, 19>
+<OPERADOR_RELACIONAL, =, 19>
+<CLASSE_INVALIDA, _, 19>
+<CLASSE_INVALIDA, \, 19>
+<DELIMITADOR, }, 20>
+
+Erro léxico na linha 21: comentário de bloco aberto.
+Erro léxico na linha 6: número mal formado
+Erro léxico na linha 8: caractere inválido.
+Erro léxico na linha 9: número mal formado
+Erro léxico na linha 10: número mal formado
+Erro léxico na linha 17: caractere inválido.
+Erro léxico na linha 17: caractere inválido.
+Erro léxico na linha 19: caractere inválido
+Erro léxico na linha 19: caractere inválido.
+Erro léxico na linha 9: número mal formado
+Erro léxico na linha 10: número mal formado

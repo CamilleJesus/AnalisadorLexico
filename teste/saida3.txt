@@ -1,1 +1,2 @@
+
 Erro léxico na linha 1: comentário de bloco aberto.
