@@ -23,7 +23,7 @@ public class AnalisadorLexico {
     }
 
     public static void lerArquivos() {
-        File arquivos[], diretorio = new File("teste/");
+        File arquivos[], diretorio = new File("test/");
         arquivos = diretorio.listFiles();
         int numeroArquivo = 0;
 
@@ -205,7 +205,7 @@ public class AnalisadorLexico {
             return "OPERADOR_RELACIONAL";
         } else if (lexema.matches("!|(&&)|(\\|\\|)")) {
             return "OPERADOR_LOGICO";
-        } else if (lexema.matches(";|,|\\(|\\)|[|]|\\{|}|\\.")) {
+        } else if (lexema.matches(":|;|,|\\(|\\)|[|]|\\{|}|\\.")) {
             return "DELIMITADOR";
         } else if (lexema.matches("\"((\\\\\")|[^\"]|\\n)*\"")) {
             return "CADEIA_CARACTERES";
@@ -265,11 +265,12 @@ public class AnalisadorLexico {
 
     // GERA O ARQUIVO DE SAÍDA COM OS DEVIDOS TOKENS E POSSÍVELS ERROS LÉXICOS
     public static void escreveArquivo(int numeroArquivo) throws IOException {
-        BufferedWriter buffWrite = new BufferedWriter(new FileWriter("teste/saida" + numeroArquivo + ".txt"));
+        BufferedWriter buffWrite = new BufferedWriter(new FileWriter("test/saida" + numeroArquivo + ".txt"));
 
         for (int i = 0; i < tokens.size(); i++) {
             buffWrite.append(tokens.get(i).toString() + "\n");
         }
+        buffWrite.append("<, $, >" + "\n");
 
         if (erros.isEmpty()) {
             buffWrite.append("\nSucesso!");

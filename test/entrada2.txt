@@ -1,0 +1,7 @@
+programa
+{
+	constantes {
+		inteiro a = 0;
+		texto padrao = "Hello World!";
+	}
+}

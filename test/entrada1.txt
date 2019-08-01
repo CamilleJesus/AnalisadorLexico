@@ -1,0 +1,6 @@
+programa
+{
+	constantes {
+		inteiro a = 0;
+	}
+}
